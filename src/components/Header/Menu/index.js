@@ -1,23 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import MenuButton from "./MenuButton";
-
-const menu = [
-  {name: "Kategorie"},
-  {name: "Nowości",active: true},
-  {name: "Promocje"},
-  {name: "Wyprzedaże"},
-  {name: "Kolekcje sezony"},
-  {name: "Nasza oferta"},
-  {name: "Trendy 2018"},
-  {name: "Blog"},
-  {name: "Kontakt"}
-];
+import MenuData from "../../../constant/MenuData";
 
 const Menu = () => {
   return (
     <div className="container categories">
-      {menu.map((el) => {
-        return <MenuButton {...el}/>;
+      {MenuData.map((el) => {
+        return <MenuButton {...el} />;
       })}
     </div>
   );

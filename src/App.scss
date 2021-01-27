@@ -16,6 +16,7 @@ $tintBlur: #ff98c8;
   display: flex;
   justify-content: space-between;
 }
+
 .middle {
   width: 100%;
   height: 200px;
@@ -31,6 +32,7 @@ $tintBlur: #ff98c8;
 .row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .topBar {
@@ -51,28 +53,55 @@ $tintBlur: #ff98c8;
   display: flex;
   margin-left: -1px;
   align-items: center;
+  border-top: 1px solid $borderColor;
   border-left: 1px solid $borderColor;
   border-right: 1px solid $borderColor;
   padding: 10px;
+  width: 110px;
+}
+
+.rect:hover {
+  cursor: pointer;
+  background-color: $borderColor;
+  transition: 0.4s;
 }
 
 .shoppingBag {
   display: flex;
   justify-content: flex-end;
   flex: 1;
-  padding: 30px;
   display: flex;
 }
+
 .shoppingBag .label {
   font-weight: 600;
 }
+
 .iconBag {
   position: relative;
   height: 50px;
+  padding: 5px;
 }
+
+.shoppingBag:hover {
+  cursor: pointer;
+}
+
+.shoppingBag:hover > .iconBag {
+  background-color: $tintBlur;
+  border-radius: 100%;
+  transition: 0.4s;
+}
+
+.searchButton:hover {
+  background-color: $tintBlur;
+  border-radius: 100%;
+  transition: 0.4s;
+}
+
 .badge {
   position: absolute;
-  background-color: $tintBlur;
+  background-color: $tint;
   color: white;
   border-radius: 100%;
   font-weight: bolder;
@@ -91,6 +120,22 @@ $tintBlur: #ff98c8;
   border-bottom: 1px solid black;
 }
 
+.searchIcon {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  color: $tintBlur;
+  transition: 0.2s;
+}
+
+.searchIcon:hover {
+  cursor: pointer;
+  color: $tint;
+  height: 40px;
+  width: 40px;
+  margin: 0px;
+}
+
 input[type="text"] {
   width: 100%;
   padding: 10px;
@@ -102,14 +147,14 @@ input[type="text"]:focus {
 }
 
 .menu {
-  margin: 18px;
   display: none;
 }
 
 .searchButton {
   display: none;
   padding: 20px;
-  height: 50px;
+  height: 40px;
+  width: 40px;
 }
 
 .menuButton {
@@ -122,9 +167,14 @@ input[type="text"]:focus {
   color: $tintBlur;
 }
 
+.sideMenu .active {
+  color: $tint;
+}
+
 .menuButton:hover {
   color: $tint;
   cursor: pointer;
+  transition: 0.4s;
 }
 .categories {
   border-bottom: 1px solid $borderColor;
@@ -132,8 +182,34 @@ input[type="text"]:focus {
   justify-content: space-between;
 }
 
+.sideMenu {
+  top: 90;
+  background-color: $tintBlur;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: 0;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.mobile {
+  color: white;
+}
+
+.side {
+  color: white;
+  margin: 40px;
+  font-size: 3ch;
+}
+@media only screen and (min-width: 900px) {
+  .sideMenu {
+    display: none;
+  }
+}
 @media only screen and (max-width: 900px) {
-  .topBar,
+  .desktop,
   .label,
   .search,
   .categories {
@@ -141,6 +217,19 @@ input[type="text"]:focus {
   }
   .menu {
     display: block;
+    padding: 10px;
+  }
+  .logo {
+    font-size: 4.5ch;
+  }
+  .rect {
+    border: none;
+  }
+
+  .menu:hover {
+    background-color: $tintBlur;
+    border-radius: 100%;
+    transition: 0.4s;
   }
 
   .searchButton {
@@ -150,6 +239,7 @@ input[type="text"]:focus {
 
   .shoppingBag {
     flex: none;
+    padding: 15px;
   }
 
   .middle {

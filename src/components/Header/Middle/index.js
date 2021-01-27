@@ -1,21 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AiOutlineShopping,
   AiOutlineSearch,
   AiOutlineMenu,
+  AiOutlineClose,
 } from "react-icons/ai";
-import Colors from "../../../Colors";
 
 const Middle = () => {
+  const [sideMenuVisable, setSideMenuVisable] = useState(false);
+
+  const showSideMenu = () => {
+    setSideMenuVisable(!sideMenuVisable);
+    document.getElementById("sideMenu").style.width = sideMenuVisable
+      ? "0"
+      : "100%";
+  };
+
   return (
     <div className="container middle">
-      <div class="menu">
-        <AiOutlineMenu size={42} />
+      <div class="menu" onClick={showSideMenu}>
+        {sideMenuVisable ? (
+          <AiOutlineClose size={50} />
+        ) : (
+          <AiOutlineMenu size={50} />
+        )}
       </div>
       <div className="logo">AuroraBox</div>
       <div className="search">
         <input type="text" placeholder="Co chcesz kupić?" />
-        <AiOutlineSearch size={30} color={Colors.light.tintBlur} />
+        <AiOutlineSearch className="searchIcon" size={30} />
       </div>
 
       <div className="searchButton">
