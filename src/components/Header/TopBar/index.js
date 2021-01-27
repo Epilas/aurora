@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   AiOutlineMail,
   AiOutlinePhone,
@@ -14,7 +14,7 @@ const TopBar = (props) => {
         <div className="row">
           <div className="button">
             <AiOutlinePhone className="icon" color={Colors.light.tint} />
-            +48 123 12 32
+            644 34 65
           </div>
           <div className="button">
             <AiOutlineMail className="icon" color={Colors.light.tint} />
