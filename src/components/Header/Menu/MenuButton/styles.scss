@@ -1,0 +1,24 @@
+@import "../../../../App.scss";
+
+.menuButton {
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.active {
+  color: $tintBlur;
+}
+
+.sideMenu .active {
+  color: $tint;
+}
+
+.menuButton:hover {
+  color: $tint;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.mobile {
+  color: white;
+}

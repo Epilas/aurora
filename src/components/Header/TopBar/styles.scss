@@ -1,0 +1,52 @@
+@import "../../../App.scss";
+
+.topBar {
+  color: $fontColor;
+  border-bottom: 1px solid $borderColor;
+}
+
+.icon {
+  margin-right: 8px;
+  color: $tint;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.topBar .button {
+  display: flex;
+  padding: 10px;
+}
+
+.signupBtn {
+  display: flex;
+  margin-left: -1px;
+  align-items: center;
+  border-top: 1px solid $borderColor;
+  border-left: 1px solid $borderColor;
+  border-right: 1px solid $borderColor;
+  padding: 10px;
+  width: 110px;
+}
+
+.signupBtn:hover {
+  cursor: pointer;
+  background-color: $borderColor;
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 900px) {
+  .signupBtn {
+    border: none;
+  }
+  .signupBtn:hover {
+    color: white;
+    background-color: $tint;
+  }
+  .icon {
+    color: white;
+  }
+}

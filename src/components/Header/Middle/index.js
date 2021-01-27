@@ -5,6 +5,7 @@ import {
   AiOutlineMenu,
   AiOutlineClose,
 } from "react-icons/ai";
+import styles from "./styles.scss";
 
 const Middle = () => {
   const [sideMenuVisable, setSideMenuVisable] = useState(false);
@@ -18,7 +19,7 @@ const Middle = () => {
 
   return (
     <div className="container middle">
-      <div class="menu" onClick={showSideMenu}>
+      <div className="menuBtn" onClick={showSideMenu}>
         {sideMenuVisable ? (
           <AiOutlineClose size={50} />
         ) : (
@@ -26,7 +27,7 @@ const Middle = () => {
         )}
       </div>
       <div className="logo">AuroraBox</div>
-      <div className="search">
+      <div className="searchContainer">
         <input type="text" placeholder="Co chcesz kupić?" />
         <AiOutlineSearch className="searchIcon" size={30} />
       </div>

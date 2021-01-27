@@ -1,6 +1,7 @@
 import React from "react";
 import MenuButton from "./MenuButton";
 import MenuData from "../../../constant/MenuData";
+import styles from "./styles.scss";
 
 const Menu = () => {
   return (

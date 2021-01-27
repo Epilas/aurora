@@ -1,0 +1,26 @@
+@import "../../../App.scss";
+
+.side {
+  color: white;
+  margin: 40px;
+  font-size: 3ch;
+}
+
+.sideMenu {
+  top: 90;
+  background-color: $tintBlur;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: 0;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 900px) {
+  .sideMenu {
+    display: none;
+  }
+}

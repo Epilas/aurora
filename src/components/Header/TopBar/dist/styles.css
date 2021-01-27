@@ -1,0 +1,74 @@
+.App {
+  justify-content: center;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 900px) {
+  .desktop,
+.label,
+.search,
+.categories {
+    display: none;
+  }
+}
+.topBar {
+  color: #505050;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #f54295;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.topBar .button {
+  display: flex;
+  padding: 10px;
+}
+
+.signupBtn {
+  display: flex;
+  margin-left: -1px;
+  align-items: center;
+  border-top: 1px solid #c8c8c8;
+  border-left: 1px solid #c8c8c8;
+  border-right: 1px solid #c8c8c8;
+  padding: 10px;
+  width: 110px;
+}
+
+.signupBtn:hover {
+  cursor: pointer;
+  background-color: #c8c8c8;
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 900px) {
+  .signupBtn {
+    border: none;
+  }
+
+  .signupBtn:hover {
+    color: white;
+    background-color: #f54295;
+  }
+
+  .icon {
+    color: white;
+  }
+}
