@@ -73,7 +73,7 @@
 
 .badge {
   position: absolute;
-  background-color: #f54295;
+  background-color: #ff98c8;
   color: white;
   border-radius: 100%;
   font-weight: bolder;
@@ -113,10 +113,32 @@ input[type=text]:focus {
   height: 50px;
 }
 
+.menuButton {
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.active {
+  color: #ff98c8;
+}
+
+.menuButton:hover {
+  color: #f54295;
+  cursor: pointer;
+}
+
+.categories {
+  border-bottom: 1px solid #c8c8c8;
+  padding-bottom: 30px;
+  justify-content: space-between;
+}
+
 @media only screen and (max-width: 900px) {
   .topBar,
 .label,
-.search {
+.search,
+.categories {
     display: none;
   }
 

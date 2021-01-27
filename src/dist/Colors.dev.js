@@ -5,11 +5,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var tintColor = "#f54295";
+var tintBlurColor = "#ff98c8";
 var Colors = {
   light: {
     text: '#000',
     background: '#fff',
-    tint: tintColor
+    tint: tintColor,
+    tintBlur: tintBlurColor
   }
 };
 var _default = Colors;

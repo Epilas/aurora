@@ -2,25 +2,25 @@ import React, { Component } from "react";
 import MenuButton from "./MenuButton";
 
 const menu = [
-  "Kategorie",
-  "Nowości",
-  "Promocje",
-  "Wyprzedaże",
-  "Kolekcje sezony",
-  "Nasza oferta",
-  "Trendy 2018",
-  "Blog",
-  "Kontakt",
+  {name: "Kategorie"},
+  {name: "Nowości",active: true},
+  {name: "Promocje"},
+  {name: "Wyprzedaże"},
+  {name: "Kolekcje sezony"},
+  {name: "Nasza oferta"},
+  {name: "Trendy 2018"},
+  {name: "Blog"},
+  {name: "Kontakt"}
 ];
 
-export default class Menu extends Component {
-  render() {
-    return (
-      <div className="container">
-        {menu.forEach((element) => 
-          <MenuButton name="FFF" />
-        )}
-      </div>
-    );
-  }
-}
+const Menu = () => {
+  return (
+    <div className="container categories">
+      {menu.map((el) => {
+        return <MenuButton {...el}/>;
+      })}
+    </div>
+  );
+};
+
+export default Menu;

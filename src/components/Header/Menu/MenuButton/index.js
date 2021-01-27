@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class MenuButton extends Component {
-  constructor(props) {
-    super(props);
+const MenuButton = (props) => {
+  return (
+    <div className={`menuButton ${props.active ? "active" : ""}`}>
+      {props.name}
+    </div>
+  );
+};
 
-    this.name = props.name;
-  }
-  render() {
-        return <div>{this.name}</div>;
-  }
-}
+export default MenuButton;

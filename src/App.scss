@@ -1,6 +1,7 @@
 $borderColor: #c8c8c8;
 $fontColor: #505050;
 $tint: #f54295;
+$tintBlur: #ff98c8;
 
 .App {
   justify-content: center;
@@ -59,7 +60,7 @@ $tint: #f54295;
   display: flex;
   justify-content: flex-end;
   flex: 1;
-  padding:30px; 
+  padding: 30px;
   display: flex;
 }
 .shoppingBag .label {
@@ -71,7 +72,7 @@ $tint: #f54295;
 }
 .badge {
   position: absolute;
-  background-color: $tint;
+  background-color: $tintBlur;
   color: white;
   border-radius: 100%;
   font-weight: bolder;
@@ -107,14 +108,35 @@ input[type="text"]:focus {
 
 .searchButton {
   display: none;
-  padding:20px; 
+  padding: 20px;
   height: 50px;
+}
+
+.menuButton {
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.active {
+  color: $tintBlur;
+}
+
+.menuButton:hover {
+  color: $tint;
+  cursor: pointer;
+}
+.categories {
+  border-bottom: 1px solid $borderColor;
+  padding-bottom: 30px;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 900px) {
   .topBar,
   .label,
-  .search {
+  .search,
+  .categories {
     display: none;
   }
   .menu {
@@ -131,6 +153,6 @@ input[type="text"]:focus {
   }
 
   .middle {
-    height:90px;
+    height: 90px;
   }
 }
